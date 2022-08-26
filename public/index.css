@@ -1,0 +1,74 @@
+/* Root */
+
+body {
+  text-align: center;
+}
+
+section {
+  padding: 7% 10%;
+}
+
+section div {
+  padding: 1% 0%
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+nav {
+  background-color: aliceblue;
+}
+
+/* index.html */
+
+.home-img {
+  width: 50%
+}
+
+.profile 
+  .container {
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 10px 1px rgba(146, 142, 142, 0.46);
+    border-radius: 8px;
+  }
+
+  .profile-buttons {
+    display: inline;
+    padding-right: 50px;
+    padding-left: 5px;
+  }
+
+  .bi {
+    color: dodgerblue;
+  }
+
+  hr {
+    border-style: solid none none none;
+    border-width: 2px;
+    color: rgb(88, 87, 87);
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+.portal
+  .col-sm { 
+    padding: 0 5%;
+  }
+
+  section h4 {
+    padding-bottom: 5%;
+  }
+
+  .vertical-line {
+    border-left: 2px solid dodgerblue;
+    height: 650px;
+  }
+
+  .err {
+    color: red;
+    display:block;
+    padding-bottom: 10px;
+  }

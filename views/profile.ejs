@@ -1,0 +1,86 @@
+<%- include('partials/header'); -%>
+
+  <section class="profile">
+
+    <% if (!profileData[0]) { %>
+        <img src="hhttps://cdn.dribbble.com/users/2350492/screenshots/4710584/media/097899780f1a7fa8cf88a6d60704533b.png" alt="bad-gateway img">
+        <h2>Opps! Error Code 500: Internal Server Error.</h2>
+        <h6>Uhh, its not you, its us :( Your login was successfull, but the server did not send back any data. Please try again later.</h6>
+    <% } else { %>
+
+      <h3>Your Profile</h3>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h6>Full Name</h6>
+            <p><%= profileData[0].fullName %></p>
+          </div>
+          <div class="col-sm">
+            <h6>E-mail Address</h6>
+            <p><%= profileData[0].email %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Username</h6>
+            <p><%= profileData[0].username %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <h6>Phone Number</h6>
+            <p><%= profileData[0].phoneNumber %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Address</h6>
+            <p><%= profileData[0].address %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Health Card Information</h6>
+            <p><%= profileData[0].cardInfo %></p>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <h6>Age</h6>
+            <p><%= profileData[0].age %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Height</h6>
+            <p><%= profileData[0].height %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Weight</h6>
+            <p><%= profileData[0].weight %></p>
+          </div>
+        </div>
+        <div class="row">
+          
+          <div class="col-sm">
+            <h6>Nearest Saved Hospital</h6>
+            <p><%= profileData[0].hospital %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Last Visited</h6>
+            <p><%= profileData[0].lastVisited %></p>
+          </div>
+          <div class="col-sm">
+            <h6>Upcoming Appointment</h6>
+            <p><%= profileData[0].upcoming %></p>
+          </div>
+        </div>
+        <hr>
+        <div class="buttons">
+          <i class="bi bi-pencil-fill"></i>
+          <a href="/editProfile"><h6 class="profile-buttons">Edit Profile</h6></a>
+          <i class="bi bi-qr-code-scan"></i>
+          <a href="#"><h6 class="profile-buttons">Generate QR Code</h6></a>
+          <i class="bi bi-box-arrow-left"></i>
+          <a href="/signOut"><h6 class="profile-buttons">Sign Out</h6></a>
+        </div>        
+      </div>
+
+  </section>
+
+
+  <%- include('partials/footer'); -%> 
