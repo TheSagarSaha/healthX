@@ -80,6 +80,48 @@
         </div>        
       </div>
 
+      <div class="documents">
+        <h3>Medical Documents</h3>
+        <h6>In order to upload a new file, please use the following form.</h6>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="fileUpload">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="uploadedFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+          </div>
+          <button type="submit" class="btn btn-primary upload">Upload</button>
+        </form>
+
+        <div>
+          <h5>Here are your previously uploaded files: </h5>
+          <br>
+          <% if (files.length != 0) { %>
+
+            <% files.forEach(function(file) { %>
+              <div class="card card-body mb-3">
+
+                <div>
+                  <h6>File Name: <a target="_blank" href="/files/<%=file.filename%>"><%= file.filename %> </a></h6>
+                  <h6>Date Uploaded: <%= file.uploadDate %> </h6>
+                </div>
+                
+                <form method="POST" action="/files/<%= file._id %>">
+                  <button class="btn btn-outline-danger" style="padding-left: 5%; padding-right: 5%;">Delete File</button>
+                  <a class="btn btn-primary" style="padding-left: 5%; padding-right: 5%;" href="#">Share File</a>
+                </form>
+              </div>
+
+            <% }) %>
+          <% } else { %>
+              <p>It seems like you have not uploaded any files so far. Use the upload form above and try again!</p>
+          <% } %>
+
+        </div>
+
+      </div>
+
+    <% } %>
+
   </section>
 
 

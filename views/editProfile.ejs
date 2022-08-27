@@ -1,0 +1,79 @@
+<%- include('partials/header'); -%>
+
+
+
+<section class="editProfile">
+
+  <h3>Edit your personal information below</h3>
+  <p><strong>We will never share these information with others.</strong></p>
+
+  <form action="/editProfile" method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" value="<%=profileDetail[0].fullName %>">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Phone Number</label>
+        <input type="text" class="form-control" name="num" value=<%=profileDetail[0].phoneNumber %>>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Primary Email Address</label>
+        <input type="email" class="form-control" name="email" value=<%=profileDetail[0].email %>>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Secondary Email Address</label>
+        <input type="email" class="form-control" name="email2" placeholder="Optional Feild">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label>Address</label>
+        <input type="text" class="form-control" name="address" value="<%=profileDetail[0].address %>">
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Age</label>
+        <input type="number" class="form-control" name="age" value=<%=profileDetail[0].age %>>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Height</label>
+        <input type="number" class="form-control" name="height" value=<%=profileDetail[0].height %>>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Weight</label>
+        <input type="number" class="form-control" name="weight" value=<%=profileDetail[0].weight %>>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Health Card Information</label>
+      <input type="text" class="form-control" name="cardInfo" value="<%=profileDetail[0].cardInfo %>">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Nearest Local Hospital</label>
+        <input type="text" class="form-control" name="nearestHospital" value=<%=profileDetail[0].hospital%>>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Last Visited</label>
+        <input type="text" class="form-control" name="lastVisited" value=<%=profileDetail[0].lastVisited %>>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Upcoming Appointment On</label>
+        <input type="text" class="form-control" name="upcoming" value=<%=profileDetail[0].upcoming %>>
+      </div>
+    </div>
+
+    <button type="submit" style="margin-right: 10px;" class="btn btn-primary">Update Changes</button>
+    <a class="btn btn-outline-primary" href="/profile">Cancel</a>
+  </form>
+
+</section>
+
+
+<%- include('partials/footer'); -%>
