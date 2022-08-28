@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'));
-mongoose.connect("mongodb://localhost:27017/healthX", {useNewUrlParser: true})
-const conn = mongoose.createConnection("mongodb://localhost:27017/healthX");
+mongoose.connect("mongodb+srv://admin-sagar-saha:thesagarsaha@cluster0.3vqhx.mongodb.net/healthX", {useNewUrlParser: true})
+const conn = mongoose.createConnection("mongodb+srv://admin-sagar-saha:thesagarsaha@cluster0.3vqhx.mongodb.net/healthX");
 
 let gfs, gridfsBucket
 conn.once('open', () => {
